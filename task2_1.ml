@@ -14,9 +14,9 @@ let rec terms x =
   | 1 -> [1]
   | x' when x' = d -> 1::(terms (x' - 1))
   | x' -> let rec terms' x t ts =
-	    let t' = t * 2 in
-	    if t' > x then ts else t::(terms' x t' ts) in
-	  terms' x' d [];;
+            let t' = t * 2 in
+            if t' > x then ts else t::(terms' x t' ts) in
+          terms' x' d [];;
 
 let parts x =
   let rec parts' x ts res =
